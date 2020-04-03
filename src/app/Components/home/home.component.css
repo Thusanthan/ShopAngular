@@ -1,0 +1,13 @@
+body{
+    margin-left: -2px;
+}
+
+img{
+    height: 500;
+    width: 200;
+}
+
+th{
+    width: 50%;
+    vertical-align: middle;
+}
