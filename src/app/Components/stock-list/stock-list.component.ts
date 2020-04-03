@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopService } from '../Services/shop.service';
+import { Stockdetail } from '../Models/stockdetail';
 
 @Component({
   selector: 'app-stock-list',
@@ -8,6 +9,8 @@ import { ShopService } from '../Services/shop.service';
 })
 export class StockListComponent implements OnInit {
 
+  stockdetail : Stockdetail [];
+
   constructor(private getStockdetailService : ShopService) { }
 
   ngOnInit() {
@@ -15,6 +18,9 @@ export class StockListComponent implements OnInit {
     this.getStockdetailService.GetStockList().subscribe(
       datab => {
         console.log(datab)
+        this.stockdetail = datab;
+        
+
       }
     )
 
