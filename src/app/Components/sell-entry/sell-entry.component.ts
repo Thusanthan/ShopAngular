@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShopService } from '../Services/shop.service';
+import { Stockdetail } from '../Models/stockdetail';
 
 @Component({
   selector: 'app-sell-entry',
@@ -9,9 +11,19 @@ export class SellEntryComponent implements OnInit {
 
   form : any = {};
 
-  constructor() { }
+  stocklist : Stockdetail[];
+  searchterm : string;
+
+  constructor(private shopservice : ShopService) { }
 
   ngOnInit() {
+
+    this.shopservice.GetStockList().subscribe(
+      datab => {
+        console.log(datab);
+        this.stocklist = datab;
+      })
+
   }
 
   onSave(dataf :any){

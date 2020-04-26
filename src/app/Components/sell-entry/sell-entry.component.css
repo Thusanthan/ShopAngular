@@ -1,15 +1,16 @@
 h2{
-    padding-top: 15px;
+    padding-top: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 780;
     text-align: center;
 }
 
 form{
-    padding: 20px;
+    padding-right: 20px;
     margin-left: 80px;
     margin-right: 40px;
 }
+
 
 label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

@@ -11,6 +11,8 @@ import { HeaderComponent } from './Components/header/header.component';
 import { StockEntryComponent } from './Components/stock-entry/stock-entry.component';
 import { SellEntryComponent } from './Components/sell-entry/sell-entry.component';
 import { StockListComponent } from './Components/stock-list/stock-list.component';
+import { ShopService } from './Components/Services/shop.service';
+import { StockfilterPipe } from './Components/Pipe/stockfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StockListComponent } from './Components/stock-list/stock-list.component
     HeaderComponent,
     StockEntryComponent,
     SellEntryComponent,
-    StockListComponent
+    StockListComponent,
+    
+    StockfilterPipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { StockListComponent } from './Components/stock-list/stock-list.component
     
     
   ],
-  providers: [],
+  providers: [ShopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
