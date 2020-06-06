@@ -16,7 +16,7 @@ export class ShopService {
   constructor(private http : HttpClient) { }
 
   private getstocklisturl = "http://localhost:57629/api/StockDetail";
-  private stockentryurl = "http://localhost:57629/api/StockDetail";
+  private stockentryurl = "http://localhost:57629/api/StockDetail/";
 
   GetStockList() : Observable<Stockdetail[]>{ //This observable needed because when you creating a object in Stockdetail[] type in corresponding ts file need to mention Stockdetail[]  
     return this.http.get<Stockdetail[]>(this.getstocklisturl,httpOptions);
@@ -27,7 +27,7 @@ export class ShopService {
   }
 
   GetStockbyName(ItemName : string): Observable<Stockdetail[]>{
-    return this.http.get<Stockdetail[]>(this.getstocklisturl);
+    return this.http.get<Stockdetail[]>(this.getstocklisturl+ItemName,httpOptions);
   }
 
 

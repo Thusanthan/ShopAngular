@@ -11,3 +11,28 @@ th{
     width: 50%;
     vertical-align: middle;
 }
+
+@media screen and (max-width : 992px){
+    img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width : 600px){
+    img{
+        height :250px;
+        width : 350px;
+    }
+    /* .buttons{
+        padding-top: 10px;
+    } */
+
+    th{
+        vertical-align: bottom;
+    }
+
+
+}
+
+
+

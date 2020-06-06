@@ -13,6 +13,7 @@ import { SellEntryComponent } from './Components/sell-entry/sell-entry.component
 import { StockListComponent } from './Components/stock-list/stock-list.component';
 import { ShopService } from './Components/Services/shop.service';
 import { StockfilterPipe } from './Components/Pipe/stockfilter.pipe';
+import { ReturnEntryComponent } from './Components/return-entry/return-entry.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { StockfilterPipe } from './Components/Pipe/stockfilter.pipe';
     SellEntryComponent,
     StockListComponent,
     
-    StockfilterPipe
+    StockfilterPipe,
+    
+    ReturnEntryComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { StockEntryComponent } from './Components/stock-entry/stock-entry.compon
 import { SellEntryComponent } from './Components/sell-entry/sell-entry.component';
 import { HomeComponent } from './Components/home/home.component';
 import { StockListComponent } from './Components/stock-list/stock-list.component';
+import { ReturnEntryComponent } from './Components/return-entry/return-entry.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path : 'sell-entry',
     component : SellEntryComponent
+  },
+  {
+    path : 'return-entry',
+    component : ReturnEntryComponent
   }
 
 

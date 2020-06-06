@@ -4,24 +4,35 @@
 
 
     <h2>List of Stock Details</h2>
-<div class="Tableout">
-    <table>
-        <tr>
+
+    
+        <!-- <tr>
             <th>Item No</th>
             <th>Item Name</th>
             <th>Quantity</th>
             <th>Purchase Price</th>
             <th>Selling Price</th>
-        </tr>
-        <tr *ngFor="let sd of stockdetail">
-            <td>{{sd.ItemId}}</td>
-            <td>{{sd.ItemName}}</td>
-            <td>{{sd.Quantity}}</td>
-            <td>{{sd.PurchasePrice}}</td>
-            <td>{{sd.SellingPrice}}</td>
-        </tr>
-    </table>
-</div>
+        </tr> -->
+
+        <div class="items">
+            <div class="row">
+                
+                    <div *ngFor="let sd of stockdetail; let i = index" style="padding: 25px;">  
+                        <div class="item">                 
+                            Item Id : {{sd.ItemId}}<br>
+                            <img src="../../../assets/{{sd.ItemName}}.jpg"><br>
+                            Item Name : {{sd.ItemName}}<br>
+                            Quantity : {{sd.Quantity}}<br>
+                            Purchase price : {{sd.PurchasePrice}}<br>
+                        </div>       
+                    </div>
+                
+            </div>
+        </div>
+
+
+    
+
 
 
 

@@ -5,27 +5,49 @@ h2{
     text-align: center;
 }
 
-.Tableout{
-    
-    margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    
-}
 
 table{
 
     margin: 20 20 20 20;
-    border:3px solid grey;
     width: 100%;
     
 }
 
-th{
-    border: 3px solid grey;
+
+
+img{
+    height : 150px;
+    width : 150px;
 }
 
-td{
-    border: 2px solid grey;
+@media screen and (min-width : 992px){
+    .item{
+        padding-left :  40PX;
+    }
+    body{
+        background-color: burlywood;
+    }
+    
 }
 
+@media screen and (min-width:600px) and (max-width : 992px)
+{
+    .item{
+       padding-left: 40PX;
+    }
+    body{
+        background-color: cornflowerblue;
+    }
+
+}
+
+@media screen and (min-width : 0px) and (max-width : 600px) 
+{
+    .item{
+       padding-left: 170px;
+    }
+    body{
+        background-color: cyan;
+    }
+    
+}
