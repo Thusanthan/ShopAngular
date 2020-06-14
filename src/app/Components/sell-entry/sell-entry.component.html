@@ -19,23 +19,25 @@
                 </datalist>
             </div>
 
+            
             <div class="form-group">
                 <label for="item-no">Item No</label>
-                <input type="text" class="form-control" [(ngModel)]="form.itemNo"  name="itemNo" placeholder="Item No" required>
+                <input type="text" class="form-control" [(ngModel)] = "form.itemNo"  name="itemNo" placeholder="Item No" value = {{stock.ItemId}} id="itemNo" required>
             </div>
 
             <div class="form-group">
                 <label for="quantity">Quantity</label>
+
                 <input type="text" class="form-control" [(ngModel)]="form.quantity" name="quantity" placeholder="quantity" required>
             </div>
 
 
             <div class="form-group">
                 <label for="selling-price">Selling Price(.rs)</label>
-                <input type="text" class="form-control" [(ngModel)]="form.sellPrice" name="sellPrice" placeholder="Selling price" required>
+                <input type="text" class="form-control" [(ngModel)]="form.sellPrice" name="sellPrice" placeholder="Selling price" id="sellingprice" value = {{stock.SellingPrice}} required>
             </div>
             
-            <button class="btn btn-info" [disabled]="f.invalid" >Submit</button>
+            <button class="btn btn-info" >Submit</button>
 
         </form>
     

@@ -13,7 +13,10 @@ export class SellEntryComponent implements OnInit {
 
   stocklist : Stockdetail[];
   searchterm : string;
-  selectedItem : string ;
+  selectedItemName : string ;
+  stock : Stockdetail;
+
+  sellstock : Stockdetail;
 
   constructor(private shopservice : ShopService) { }
 
@@ -30,15 +33,39 @@ export class SellEntryComponent implements OnInit {
   }
 
   selectChangeHandler(event : any){
-    this.selectedItem = event.target.value;
-    console.log(this.selectedItem);
+    this.selectedItemName = event.target.value;
+    console.log(this.selectedItemName);
 
+    this.stocklist.forEach(stocks => {
+      if(stocks.ItemName == this.selectedItemName)
+      {
+        this.stock = stocks;
+
+      }
+    })
     
   }
 
   onSave(dataf :any){
     console.log(dataf);
+    console.log(this.stock.ItemId);
+
+    var num = this.stock.Quantity - this.form.quantity;
+    console.log(num);
+    console.log(this.form.itemName);
+    console.log(this.stock.PurchasePrice);
+    console.log(this.stock.SellingPrice);
     
+    
+   this.sellstock = new Stockdetail(this.form.itemName, num,this.stock.PurchasePrice,this.stock.SellingPrice);
+
+   this.shopservice.SellEntryUpdate(this.stock.ItemId, this.sellstock).subscribe(
+     datab => {
+
+      console.log(datab);
+
+      })
+
 
 
   }
